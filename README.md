@@ -1,3 +1,4 @@
 # Disney-talk 2021
 
-CSS got so much better!
+I made it using HTML and CSS.
+HTML & CSS are so much fun!
