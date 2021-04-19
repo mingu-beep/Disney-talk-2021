@@ -1,0 +1,48 @@
+.status-bar {
+  /* 안에 있는 요소들을 한줄로 배열 */
+  display: flex;
+  /* flex의 축을 따라  element를 떨어트린다.*/
+  /* justify-content: space-between; */
+  /* 하지만 이렇게 하면 각 element가 모두 같은 크기가 아니기 때문에 시간 같이 가운데 와야할 element가 가운데에 오지 못한다. */
+  /* 해결하는 방법
+  1. justify-content: center;
+  2. 포함되어있는 element들의 width를 100/n값으로 설정
+  3. 추가로 가운데, 혹은 끝쪽으로 가야하는 element들은
+  justify-content: center; justify-content: flex-end; 등을 추가로 설정한다.
+  */
+  justify-content: center;
+  padding: 5px 3px;
+}
+.status-bar__column {
+  width: 33%;
+}
+/* no service의 오른쪽에 공백을 줘서 와이파이 아이콘과 공간을 분리시킴 */
+.status-bar__column:first-child span {
+  margin-right: 5px;
+}
+
+@keyframes rotateCastle {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.fa-fort-awesome {
+  animation: rotateCastle 2s linear infinite;
+}
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: black;
+}
+.status-bar__column .fa-battery-full {
+  margin: 0px 5px;
+}

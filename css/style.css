@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=RocknRoll+One&display=swap");
+
+@import "variables.css";
+@import "reset.css";
+/* 브라우저가 만드는 임의의 margin을 없애는 방법 reset css
+  브라우저의 초기 스타일을 없앤다. 즉 우리가 모두 설정해야한다.
+*/
+/* Components */
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+@import "components/screen-header.css";
+@import "components/user-component.css";
+@import "components/badge.css";
+@import "components/icon-row.css";
+@import "components/alt-screen-header.css";
+@import "components/no-mobile.css";
+
+/* Screens */
+@import "screens/login.css";
+@import "screens/friends.css";
+@import "screens/find.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chat.css";
+
+body {
+  /* font를 찾을 때는 google font 찾아보면 좋다 */
+  font-family: "Nanum Myeongjo", serif;
+  font-family: "RocknRoll One", sans-serif;
+  color: #2e363e;
+  margin-top: 120px;
+  margin-bottom: 75px;
+  background-color: var(--main-color);
+}
+.status-bar,
+.screen-header {
+  position: fixed;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: white;
+}
+.status-bar {
+  z-index: 2;
+  top: 0px;
+}
+.screen-header {
+  z-index: 1;
+  top: 25px;
+}
+.main-screen {
+  margin: 0px var(--horizontal-space);
+}
